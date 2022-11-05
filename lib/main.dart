@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               HomePageNavbar(),
+             
             ],
           ),
         ),
