@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    int selectIndex = 2;
     return MaterialApp(
        home: Scaffold(
         backgroundColor: Colors.white,
@@ -26,14 +27,46 @@ class MyApp extends StatelessWidget {
               HomePageNavbar(),
               HomePageSlider(),
               HomePageCategories(),
-              buttomNavbar(),
             ],
           ),
         ),
 
+         bottomNavigationBar: CurvedNavigationBar(
+           items: [
+             Icon(Icons.play_arrow_outlined,
+               color: selectIndex == 0 ? Colors.white : Colors.black,
+             ),
+
+             Icon(Icons.search,
+               color: selectIndex == 1 ? Colors.white : Colors.black,
+             ),
+             Icon(Icons.home_outlined,
+               color: selectIndex == 2 ? Colors.white : Colors.black,
+             ),
+             Icon(Icons.favorite_border_outlined,
+               color: selectIndex == 3 ? Colors.white : Colors.black,
+             ),
+             Icon(Icons.person_outline,
+               color: selectIndex == 4 ? Colors.white : Colors.black,
+             ),
+
+           ],
+           backgroundColor: Colors.transparent,
+           index: selectIndex,
+           buttonBackgroundColor: Colors.cyan,
+           height: 60.0,
+           color: Colors.white,
+           onTap: (index){
+             setState((){
+               selectIndex =2;
+             });
+           },
+         ),
 
 
       ),
     );
   }
+
+  void setState(Null Function() param0) {}
 }
