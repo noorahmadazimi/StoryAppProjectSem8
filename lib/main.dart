@@ -5,6 +5,7 @@ import 'package:storyapp/storyPage.dart';
 import 'HomePageCategories.dart';
 import 'HomePageNavbar.dart';
 import 'HomePageSlider.dart';
+import 'Story.dart';
 import 'aboutPage.dart';
 
 
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    
     int selectIndex = 2;
     return MaterialApp(
        home: Scaffold(
@@ -29,8 +31,7 @@ class MyApp extends StatelessWidget {
               // HomePageNavbar(),
               // HomePageSlider(),
               // HomePageCategories(),
-              StoryPage(),
-              // AboutPage(),
+              StoryPage('Funny'),
             ],
           ),
         ),

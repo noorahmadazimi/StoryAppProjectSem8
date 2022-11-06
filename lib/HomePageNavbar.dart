@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+import 'aboutPage.dart';
+
 
 
 class HomePageNavbar extends StatelessWidget {
@@ -39,7 +41,9 @@ class HomePageNavbar extends StatelessWidget {
               SizedBox(
                 width: size.width*0.01,
               ),
-              Text('NoorAhmad Azimi',style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),),
+              TextButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutPage()));
+              }, child: Text('NoorAhmad Azimi',style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),),)
 
             ],
           ),
