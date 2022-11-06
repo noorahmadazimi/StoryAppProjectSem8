@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'HomePageCategories.dart';
 import 'HomePageNavbar.dart';
 import 'HomePageSlider.dart';
+import 'aboutPage.dart';
 
 
 void main() {
@@ -24,9 +25,11 @@ class MyApp extends StatelessWidget {
           padding: EdgeInsets.only(top: 20),
           child: Column(
             children: [
-              HomePageNavbar(),
-              HomePageSlider(),
-              HomePageCategories(),
+              // HomePageNavbar(),
+              // HomePageSlider(),
+              // HomePageCategories(),
+
+              AboutPage(),
             ],
           ),
         ),
