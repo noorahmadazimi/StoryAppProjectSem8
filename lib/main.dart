@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:storyapp/storyPage.dart';
 
 import 'HomePageCategories.dart';
 import 'HomePageNavbar.dart';
@@ -28,8 +29,8 @@ class MyApp extends StatelessWidget {
               // HomePageNavbar(),
               // HomePageSlider(),
               // HomePageCategories(),
-
-              AboutPage(),
+              StoryPage(),
+              // AboutPage(),
             ],
           ),
         ),
