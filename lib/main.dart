@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
             children: [
               HomePageNavbar(),
               HomePageSlider(),
+              HomePageCategories(),
               
             ],
           ),
