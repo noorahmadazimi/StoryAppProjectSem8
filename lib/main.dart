@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'HomePageCategories.dart';
 import 'HomePageNavbar.dart';
 import 'HomePageSlider.dart';
-import 'buttomNavbar.dart';
+
 
 void main() {
   runApp(const MyApp());
