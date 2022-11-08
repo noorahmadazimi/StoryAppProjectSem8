@@ -1,139 +1,135 @@
 import 'package:flutter/material.dart';
 
+import 'HomePageNavbar.dart';
 import 'aboutPage.dart';
 
-class StoryPage extends StatelessWidget {
+class StoryPage extends StatefulWidget {
+  const StoryPage({Key? key, required this.storyName,required this.st1,required this.st2, required this.st3, required this.st4}) : super(key: key);
 
-  String storyName ="";
-  String storyBody="";
-  StoryPage(String storyName,){
-    this.storyName=storyName;
-    this.storyBody=storyBody;
-  }
+  final String storyName;
+  final String st1;
+  final String st2;
+  final String st3;
+  final String st4;
+
+  @override
+  State<StoryPage> createState() => _StoryPageState();
+
+
+}
+
+
+class _StoryPageState extends State<StoryPage> {
 
   @override
   Widget build(BuildContext context) {
-    return   Column(
-                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                 children: [
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Center(
+              child: Container(
+                margin: const EdgeInsets.only(top: 10, bottom: 20),
+                child: Text(
+                  'Welcome To : ${widget.storyName} Stories',
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            Container(
+              width: 10,
+              height: 2,
+              color: Colors.black12,
+              margin: const EdgeInsets.only(bottom: 20, left: 30, right: 30),
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextButton(
+                          style: TextButton.styleFrom(
+                              backgroundColor: Colors.blue),
+                          onPressed: () {
 
-                   Center(
-                     child: Container(
-                       margin: EdgeInsets.only(top: 10 , bottom: 20),
-                       child: Text('Welcome To : '+storyName+' Stories',
-                         style: TextStyle(
-                           fontSize: 20,
-                           fontWeight: FontWeight.bold,
-                         ),),
-                     ),
-                   ),
+                          },
+                          child: Text(
+                            '${widget.st1}',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          )),
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: TextButton(
+                          style: TextButton.styleFrom(
+                              backgroundColor: Colors.blue),
+                          onPressed: () {},
+                          child: Text(
+                            '${widget.st2}',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          )),
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextButton(
+                          style: TextButton.styleFrom(
+                              backgroundColor: Colors.blue),
+                          onPressed: () {},
+                          child: Text(
+                            '${widget.st3}',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          )),
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextButton(
+                          style: TextButton.styleFrom(
+                              backgroundColor: Colors.blue),
+                          onPressed: () {},
+                          child: Text(
+                            '${widget.st4}',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          )),
+                    ),
+                  ),
 
-                   Container(
-                     width: 10,
-                     height: 2,
-                     color: Colors.black12,
-                     margin: EdgeInsets.only(bottom: 20 , left: 30 , right: 30),
-                   ),
+                  Container(
+                    child: TextButton(onPressed: (){
+                      Navigator.pop(context , MaterialPageRoute(builder:(context) =>HomePageNavbar()));
+                    },child: Text('BackToHome',style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                    ),),),
+                  ),
+                ],
+              ),
+            ),
 
-                   Column(
-                     crossAxisAlignment: CrossAxisAlignment.stretch,
-                     children: [
-                       TextButton(
-                           style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                           onPressed: (){
-                             Navigator.push(context, MaterialPageRoute(builder: (context)=>AboutPage()));
-                           }, child: Text(storyName , style: TextStyle(
-                         color: Colors.white,
-                       ),)),
-                       SizedBox(
-                         height: 2,
-                       ),
-                       TextButton(
-                           style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                           onPressed: (){
-                           }, child: Text('Story number 1' , style: TextStyle(
-                         color: Colors.white,
-                       ),)),
-                     ],
-                   ),
-
-
-
-
-
-
-                   // Expanded(
-                   //   child: TextButton(
-                   //       style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                   //       onPressed: (){}, child: Text('Story number 1' , style: TextStyle(
-                   //     color: Colors.white,
-                   //   ),)),
-                   // ),
-                   //
-                   // Expanded(
-                   //   child: TextButton(
-                   //       style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                   //       onPressed: (){}, child: Text('Story number 1' , style: TextStyle(
-                   //     color: Colors.white,
-                   //   ),)),
-                   // ),
-                   //
-                   // Expanded(
-                   //   child: TextButton(
-                   //       style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                   //       onPressed: (){}, child: Text('Story number 1' , style: TextStyle(
-                   //     color: Colors.white,
-                   //   ),)),
-                   // ),
-                   //
-                   // Expanded(
-                   //   child: TextButton(
-                   //       style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                   //       onPressed: (){}, child: Text('Story number 1' , style: TextStyle(
-                   //     color: Colors.white,
-                   //   ),)),
-                   // ),
-                   //
-                   // Expanded(
-                   //   child: TextButton(
-                   //       style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                   //       onPressed: (){}, child: Text('Story number 1' , style: TextStyle(
-                   //     color: Colors.white,
-                   //   ),)),
-                   // ),
-                   //
-                   // Expanded(
-                   //   child: TextButton(
-                   //       style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                   //       onPressed: (){}, child: Text('Story number 1' , style: TextStyle(
-                   //     color: Colors.white,
-                   //   ),)),
-                   // ),
-                   //
-                   // Expanded(
-                   //   child: TextButton(
-                   //       style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                   //       onPressed: (){}, child: Text('Story number 1' , style: TextStyle(
-                   //     color: Colors.white,
-                   //   ),)),
-                   // ),
-                   //
-                   // Expanded(
-                   //   child: TextButton(
-                   //       style: TextButton.styleFrom(backgroundColor: Colors.blue),
-                   //       onPressed: (){}, child: Text('Story number 1' , style: TextStyle(
-                   //     color: Colors.white,
-                   //   ),)),
-                   // ),
-
-                   // Container(
-                   //   child: TextButton(
-                   //     onPressed: (){},child: Text('BackToHome'),
-                   //   ),
-                   // ),
-
-                 ],
-
+          ],
+        ),
+      ),
     );
   }
+
+
 }

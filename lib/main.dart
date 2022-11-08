@@ -5,73 +5,71 @@ import 'package:storyapp/storyPage.dart';
 import 'HomePageCategories.dart';
 import 'HomePageNavbar.dart';
 import 'HomePageSlider.dart';
-import 'Story.dart';
-import 'aboutPage.dart';
-
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int selectedIndex = 0;
+  List<Widget> screens = [
+    const HomePageNavbar(),
+    // HomePageSlider(),
+    // HomePageCategories(),
+    // StoryPage('Funn y'),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    
-    int selectIndex = 2;
     return MaterialApp(
-       home: Scaffold(
-        backgroundColor: Colors.white,
-        body: Padding(
-          padding: EdgeInsets.only(top: 20),
-          child: Column(
-            children: [
-              // HomePageNavbar(),
-              // HomePageSlider(),
-              // HomePageCategories(),
-              StoryPage('Funny'),
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.white,
+          body: screens[selectedIndex],
+          bottomNavigationBar: CurvedNavigationBar(
+            items: [
+              Icon(
+                Icons.play_arrow_outlined,
+                color: selectedIndex == 0 ? Colors.white : Colors.black,
+              ),
+              Icon(
+                Icons.search,
+                color: selectedIndex == 1 ? Colors.white : Colors.black,
+              ),
+              Icon(
+                Icons.home_outlined,
+                color: selectedIndex == 2 ? Colors.white : Colors.black,
+              ),
+              Icon(
+                Icons.favorite_border_outlined,
+                color: selectedIndex == 3 ? Colors.white : Colors.black,
+              ),
+              Icon(
+                Icons.person_outline,
+                color: selectedIndex == 4 ? Colors.white : Colors.black,
+              ),
             ],
+            backgroundColor: Colors.transparent,
+            index: selectedIndex,
+            buttonBackgroundColor: Colors.cyan,
+            height: 60.0,
+            color: Colors.white,
+            onTap: (index) {
+              setState(() {
+                selectedIndex = index;
+              });
+            },
           ),
         ),
-
-         bottomNavigationBar: CurvedNavigationBar(
-           items: [
-             Icon(Icons.play_arrow_outlined,
-               color: selectIndex == 0 ? Colors.white : Colors.black,
-             ),
-
-             Icon(Icons.search,
-               color: selectIndex == 1 ? Colors.white : Colors.black,
-             ),
-             Icon(Icons.home_outlined,
-               color: selectIndex == 2 ? Colors.white : Colors.black,
-             ),
-             Icon(Icons.favorite_border_outlined,
-               color: selectIndex == 3 ? Colors.white : Colors.black,
-             ),
-             Icon(Icons.person_outline,
-               color: selectIndex == 4 ? Colors.white : Colors.black,
-             ),
-
-           ],
-           backgroundColor: Colors.transparent,
-           index: selectIndex,
-           buttonBackgroundColor: Colors.cyan,
-           height: 60.0,
-           color: Colors.white,
-           onTap: (index){
-             setState((){
-               selectIndex =2;
-             });
-           },
-         ),
-
-
       ),
     );
   }
-
-  void setState(Null Function() param0) {}
 }
