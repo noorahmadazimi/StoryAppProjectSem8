@@ -12,7 +12,7 @@ class HomePageCategories extends StatelessWidget {
     categoryStyle catStycle = catStyle[index];
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      padding:  EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
       child: Container(
         height: size.height * 0.2,
         decoration: BoxDecoration(
@@ -22,11 +22,11 @@ class HomePageCategories extends StatelessWidget {
               BoxShadow(
                 color: Colors.black.withOpacity(0.3),
                 blurRadius: 30.0,
-                offset: const Offset(10, 15),
+                offset:  Offset(10, 15),
               ),
             ]),
         child: Padding(
-          padding: const EdgeInsets.all(20),
+          padding:  EdgeInsets.all(20),
           child: Row(
             children: [
               SizedBox(
@@ -43,13 +43,13 @@ class HomePageCategories extends StatelessWidget {
               SizedBox(
                 width: size.width * 0.4,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 10, top: 20 / 1.5),
+                  padding:  EdgeInsets.only(left: 10, top: 20 / 1.5),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         catStycle.name,
-                        style: const TextStyle(
+                        style:  TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 16),
                         maxLines: 2,
                       ),
@@ -84,10 +84,10 @@ class HomePageCategories extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
+          padding:  EdgeInsets.fromLTRB(20, 10, 20, 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children:  [
               Text(
                 'Stories',
                 style: TextStyle(
@@ -107,7 +107,7 @@ class HomePageCategories extends StatelessWidget {
         ),
         Expanded(
           child: ListView.builder(
-              physics: const BouncingScrollPhysics(),
+              physics: BouncingScrollPhysics(),
               itemCount: catStyle.length,
               itemBuilder: (context, int index) {
                 return GestureDetector(

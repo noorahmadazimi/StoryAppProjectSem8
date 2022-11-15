@@ -89,7 +89,19 @@ class AboutPage extends StatelessWidget {
                     'Story App is one of the intrested app for '
                     'Ones whom loves to read stories. this app contains three categories. '
                     'This app created by me with help of my teacher "Amir Mohammad Azimi" '
-                    'Thank you Dear Teacher Hope you the Bests',
+                    'Thank you Dear Teacher Hope you the Bests'
+                        'My most profound appreciation goes to Professor'
+                        ' Mr Amir Mohammad Azimi advisors and mentors,'
+                        ' for their time, effort, and understanding in helping'
+                        ' me succeed in my studies. Their vast wisdom and wealth'
+                        ' of experience have inspired me throughout my studies.'
+                        ' In addition,I’d like'
+                        ' to express my gratitude to everyone who helps me for Completing This App. Thanks to'
+                        ' their generosity and encouragement, my time spent studying'
+                        '  has been truly rewarding. To conclude,'
+                        ' I’d like to thank God'
+                        ' It would have been impossible to finish my studies without '
+                        'their unwavering support.',
                     textAlign: TextAlign.justify,
                     style: TextStyle(fontSize: 14, color: Colors.black),
                   ),
