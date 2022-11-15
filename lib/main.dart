@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:storyapp/showStories.dart';
 import 'package:storyapp/storyPage.dart';
 
 import 'HomePageCategories.dart';
@@ -20,10 +21,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   int selectedIndex = 0;
   List<Widget> screens = [
-    const HomePageNavbar(),
+     HomePageNavbar(),
     // HomePageSlider(),
     // HomePageCategories(),
     // StoryPage('Funn y'),
+
   ];
 
   @override

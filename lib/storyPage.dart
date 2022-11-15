@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:storyapp/showStories.dart';
 
 import 'HomePageNavbar.dart';
 import 'aboutPage.dart';
@@ -58,7 +59,7 @@ class _StoryPageState extends State<StoryPage> {
                           style: TextButton.styleFrom(
                               backgroundColor: Colors.blue),
                           onPressed: () {
-
+                          Navigator.push(context,MaterialPageRoute(builder: (context)=>ShowStories( storyName: '${widget.st1}', storyDetails: '1' , cate: '${widget.storyName}')));
                           },
                           child: Text(
                             '${widget.st1}',
@@ -74,7 +75,9 @@ class _StoryPageState extends State<StoryPage> {
                       child: TextButton(
                           style: TextButton.styleFrom(
                               backgroundColor: Colors.blue),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context,MaterialPageRoute(builder: (context)=>ShowStories(storyName: '${widget.st2}', storyDetails: '2' , cate: '${widget.storyName}')));
+                          },
                           child: Text(
                             '${widget.st2}',
                             style: TextStyle(
@@ -89,7 +92,9 @@ class _StoryPageState extends State<StoryPage> {
                       child: TextButton(
                           style: TextButton.styleFrom(
                               backgroundColor: Colors.blue),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context,MaterialPageRoute(builder: (context)=>ShowStories( storyName: '${widget.st3}', storyDetails: '3' , cate: '${widget.storyName}',)));
+                          },
                           child: Text(
                             '${widget.st3}',
                             style: TextStyle(
@@ -104,7 +109,9 @@ class _StoryPageState extends State<StoryPage> {
                       child: TextButton(
                           style: TextButton.styleFrom(
                               backgroundColor: Colors.blue),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context,MaterialPageRoute(builder: (context)=>ShowStories( storyName: '${widget.st4}', storyDetails: '4' , cate: '${widget.storyName}')));
+                          },
                           child: Text(
                             '${widget.st4}',
                             style: TextStyle(
