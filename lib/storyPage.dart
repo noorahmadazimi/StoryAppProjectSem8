@@ -30,10 +30,10 @@ class _StoryPageState extends State<StoryPage> {
           children: [
             Center(
               child: Container(
-                margin: const EdgeInsets.only(top: 10, bottom: 20),
+                margin:  EdgeInsets.only(top: 10, bottom: 20),
                 child: Text(
                   'Welcome To : ${widget.storyName} Stories',
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -44,7 +44,7 @@ class _StoryPageState extends State<StoryPage> {
               width: 10,
               height: 2,
               color: Colors.black12,
-              margin: const EdgeInsets.only(bottom: 20, left: 30, right: 30),
+              margin: EdgeInsets.only(bottom: 20, left: 30, right: 30),
             ),
             Expanded(
               child: Column(
@@ -53,7 +53,7 @@ class _StoryPageState extends State<StoryPage> {
                 children: [
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: TextButton(
                           style: TextButton.styleFrom(
                               backgroundColor: Colors.blue),
@@ -85,7 +85,7 @@ class _StoryPageState extends State<StoryPage> {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: TextButton(
                           style: TextButton.styleFrom(
                               backgroundColor: Colors.blue),
@@ -100,7 +100,7 @@ class _StoryPageState extends State<StoryPage> {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(8.0),
                       child: TextButton(
                           style: TextButton.styleFrom(
                               backgroundColor: Colors.blue),

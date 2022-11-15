@@ -17,23 +17,23 @@ class AboutPage extends StatelessWidget {
             top: 0,
             left: 0,
             child: Padding(
-              padding: const EdgeInsets.all(15.0),
+              padding:  EdgeInsets.all(15.0),
               child: IconButton(
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  icon: const Icon(Icons.arrow_back)),
+                  icon:  Icon(Icons.arrow_back)),
             ),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const CircleAvatar(
+               CircleAvatar(
                 radius: 50,
                 backgroundColor: Colors.cyan,
                 backgroundImage: AssetImage('images/azimi.jpg'),
               ),
-              const Text(
+               Text(
                 'Noor Ahmad Azimi',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
@@ -42,20 +42,20 @@ class AboutPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Text(
+               Text(
                 'FLUTTER DEVELOPER',
                 style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.w100,
                     color: Colors.lightBlue),
               ),
-              const SizedBox(
+               SizedBox(
                 height: 10,
               ),
               Container(
                 height: 50,
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 25),
+                padding:  EdgeInsets.symmetric(horizontal: 20),
+                margin:  EdgeInsets.symmetric(vertical: 4, horizontal: 25),
                 color: Colors.black12,
                 child: Row(
                   children: const [
@@ -81,10 +81,10 @@ class AboutPage extends StatelessWidget {
               Container(
                 height: 240,
                 margin:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 80),
-                padding: const EdgeInsets.all(10),
+                     EdgeInsets.symmetric(vertical: 10, horizontal: 80),
+                padding:  EdgeInsets.all(10),
                 color: Colors.black12,
-                child: const Expanded(
+                child:  Expanded(
                   child: Text(
                     'Story App is one of the intrested app for '
                     'Ones whom loves to read stories. this app contains three categories. '
@@ -96,8 +96,8 @@ class AboutPage extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 20),
-                padding: const EdgeInsets.symmetric(horizontal: 30),
+                margin:  EdgeInsets.only(top: 20),
+                padding:  EdgeInsets.symmetric(horizontal: 30),
                 child: TextButton(
                   onPressed: () {
                     Navigator.pop(context);
@@ -105,7 +105,7 @@ class AboutPage extends StatelessWidget {
                   style: ButtonStyle(
                       backgroundColor:
                           MaterialStateProperty.all(Colors.lightBlueAccent)),
-                  child: const Text(
+                  child:  Text(
                     'Back To Home',
                     style: TextStyle(
                       fontSize: 18,
